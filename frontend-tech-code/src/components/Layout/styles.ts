@@ -3,10 +3,16 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   background-color: #222222;
   padding: 2.5rem;
+
+  @media (max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 `;
 
 export const Box = styled.div`
