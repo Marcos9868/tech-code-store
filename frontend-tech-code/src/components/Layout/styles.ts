@@ -49,6 +49,8 @@ export const Box = styled.div`
 
     p {
       font-size: 0.875rem;
+      color: #f5f5f5;
+      margin-top: 0.75rem;
     }
 
     div {
