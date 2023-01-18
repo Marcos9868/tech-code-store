@@ -5,6 +5,7 @@ const Header = () => {
   return (
     <Container>
       <img src={logoImg}/>
+      <button>Estoque</button>
     </Container>
   )
 }
