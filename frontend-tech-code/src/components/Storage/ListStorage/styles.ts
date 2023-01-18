@@ -32,7 +32,6 @@ export const Box = styled.div`
     margin-bottom: 1.5rem;
     margin-top: 1rem;
     align-items: center;
-    justify-content: center;
 
     h2 {
       margin-bottom: 0.75rem;
@@ -47,6 +46,7 @@ export const Box = styled.div`
       width: 10rem;
       height: 10rem;
       align-self: center;
+      justify-content: center;
       border-radius: 4px;
       margin-bottom: 0.375rem;
     }
