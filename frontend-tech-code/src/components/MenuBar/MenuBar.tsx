@@ -7,22 +7,22 @@ const MenuBar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">
+            <NavLink to="/storage/list">
               <span>Listar Produtos</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="pizzas">
+            <NavLink to="/storage/create">
               <span>Cadastro</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="drinks">
+            <NavLink to="/storage/update">
               <span>Modificar Produto</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="ice-creams">
+            <NavLink to="/storage/remove">
               <span>Remover Produto</span>
             </NavLink>
           </li>
