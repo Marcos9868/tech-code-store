@@ -7,11 +7,14 @@ export const Container = styled.div`
   margin: 0 auto;
 
   > section {
-    flex: 1;
-    width: 10%;
-    height: 100vh;
+    display: grid
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
     padding: 2rem 1.875rem;
+    border-radius: 12px;
     
     @media (max-width: 720px) {
       display: flex;
