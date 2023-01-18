@@ -27,7 +27,7 @@ const Login = () => {
           variant='flushed'
           width='200px'
         />
-        <DButton />
+        <DButton>Entrar</DButton>
       </Card>
     </Container>
   )
