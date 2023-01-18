@@ -36,6 +36,7 @@ export const Box = styled.div`
       font-weight: 700;
       font-size: 1.5rem;
       text-align: center;
+      color: #f5f5f5
     }
 
     img {
@@ -59,6 +60,7 @@ export const Box = styled.div`
       strong {
         font-size: 2rem;
         font-weight: 500;
+        color: #f5f5f5;
       }
 
       button {
