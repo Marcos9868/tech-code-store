@@ -36,13 +36,13 @@ class ProductsRepository {
     return rows || [];
   }
 
-  async getProduct(name: string): Promise<Product> {
+  async getProduct(id: number): Promise<Product> {
     const query = `
       SELECT * FROM products
-      WHERE name = $1
+      WHERE id = $1
     `;
 
-    const values = [name];
+    const values = [id];
     const { rows } = await db.query<Product>(query, values);
     const [ product ] = rows;
 
@@ -53,29 +53,31 @@ class ProductsRepository {
     const script = `
       UPDATE products
       SET
-        description = $1,
-        price = $2,
-        quantity = $3
-      WHERE name = $4 
+        name = $1
+        description = $2,
+        price = $3,
+        quantity = $4
+      WHERE id = $5 
     `;
 
     const values = [
+      product.name,
       product.description, 
       product.price, 
       product.quantity, 
-      product.name
+      product.id
     ];
 
     await db.query(script, values);
   }
 
-  async removeProduct(name: string): Promise<void> {
+  async removeProduct(id: number, name: string): Promise<void> {
     const script = `
       DELETE FROM products
-      WHERE name = $1
+      WHERE id = $1 AND name = $2 
     `;
 
-    const values = [name];
+    const values = [id, name];
     await db.query(script, values);
   }
 }
