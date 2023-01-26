@@ -4,7 +4,8 @@ interface IProducts {
   image: string;
   description: string;
   price: number;
-  quantity: number;
+  quantity?: number;
+  category?: string;
 }
 
 export default IProducts;
