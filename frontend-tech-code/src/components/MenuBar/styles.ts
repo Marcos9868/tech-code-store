@@ -6,7 +6,7 @@ export const Container = styled.aside`
   align-items: center;
   justify-content: space-between;
   background-color: black;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 
   ul {
     display: flex;
@@ -16,9 +16,9 @@ export const Container = styled.aside`
 
     li {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin: 0 auto;
-      padding: 0 7rem;
+      padding: 0 6rem;
       color: #f5f5f5;
     }
   }

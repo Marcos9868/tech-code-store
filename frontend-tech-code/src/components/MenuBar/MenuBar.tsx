@@ -7,23 +7,28 @@ const MenuBar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/storage/list">
-              <span>Listar Produtos</span>
+            <NavLink to="/">
+              <span>Home</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/storage/create">
-              <span>Cadastro</span>
+            <NavLink to="/video">
+              <span>Vídeo</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/storage/update">
-              <span>Modificar Produto</span>
+            <NavLink to="/monitors">
+              <span>Monitores</span>
             </NavLink>
           </li>
           <li>
-            <NavLink to="/storage/remove">
-              <span>Remover Produto</span>
+            <NavLink to="/keyboard-mouse">
+              <span>Mouse/Teclado</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/headsets">
+              <span>Headsets</span>
             </NavLink>
           </li>
         </ul>
