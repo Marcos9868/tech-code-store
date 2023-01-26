@@ -1,23 +1,17 @@
-import { Box, Container } from './styles'
-import { FiPlus } from 'react-icons/fi';
-import { currencyFormat } from '../../helpers/currency';
-import { useEffect, useState } from 'react';
-// import axios from 'axios';
-// import IProducts from '../../interfaces/IProducts';
+import { Container } from './styles'
+// import { useEffect, useState } from 'react';
+// import { getProducts } from '../../services/api';
+import Products from '../Products/Products';
 
 const Layout = () => {
-  // const [ products, setProducts ] = useState<IProducts[]>([]);
-
-  // async function getAllProducts() {
-  //   await axios
-  //     .get('http://localhost:4000/api/products')
-  //     .then((response) => setProducts(response.data))
-  //     .catch((err) => console.log(err))
-  // }
+  // const [ products, setProducts ] = useState([]);
 
   // useEffect(() => {
-  //   getAllProducts();
-  // }, []);
+  //   (async () => {
+  //     const productData = await getProducts();
+  //     setProducts(productData.data);
+  //   })
+  // })
 
   const products = [
     {
@@ -66,23 +60,7 @@ const Layout = () => {
 
   return (
     <Container>
-      <Box>
-        {!products.length
-          ? [1, 2, 3, 4].map((n) => <p>Loading...</p>)
-          : products.map((product) => (
-            <div key={product.id} className='product'>
-              <h2>{product.name}</h2>
-              <img src={product.image} alt={product.image} />
-              <p>{product.description}</p>
-              <div>
-                <strong>{currencyFormat(product.price)}</strong>
-                <button type='button'>
-                  <FiPlus />
-                </button>
-              </div>
-            </div>
-          ))}
-      </Box>
+      <Products products={products} />
     </Container>
   )
 }
